@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../logo.svg'
+import logo from '../logo.svg';
+import styled from 'styled-components';
+import {ButtonContainer} from './Button';
 
 export default class NavBar extends Component {
 	render() {
@@ -22,13 +24,17 @@ https://www.iconfinder.com/Makoto_msk */}
 			</li>
 			</ul>
 			<Link to="/cart" className="ml-auto">
-			<button>
+			<ButtonContainer>
+			<span className="mr-2">
 			<i className="fas fa-cart-plus" />
+			</span>
 			My Cart
-			</button>
+			</ButtonContainer>
 			</Link>
 			</nav>
 		);
 
 	}
 }
+
+

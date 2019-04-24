@@ -20,7 +20,7 @@ export default class Details extends React.Component {
                             <div className="row">
                                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
                                     <img src={img} className="img-fluid" alt="product"/>
-                                    
+
                                 </div>
                             </div>
                             <div className="row">
@@ -30,7 +30,7 @@ export default class Details extends React.Component {
                                         made by: <span className="text-uppercase"> {company}</span>
                                     </h4>
                                     <h4 className="text-blue">
-                
+
                                         <strong>
                                             price: <span>$</span>
                                             {price}
@@ -51,6 +51,7 @@ export default class Details extends React.Component {
                                             cart
                                             disabled={inCart?true:false}
                                             onClick={() =>{value.addToCart(id);
+                                                value.openModal(id);
                                             }}>
                                             {inCart? "inCart" : "add to cart"}
                                         </ButtonContainer>
